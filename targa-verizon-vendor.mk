@@ -16,19 +16,9 @@
 
 include $(all-subdir-makefiles)
 
-#stop the data drops for now
-#PRODUCT_COPY_FILES += \
-#    vendor/verizon/proprietary/libims_client_jni.so:system/lib/libims_client_jni.so
-
-
 PRODUCT_PACKAGES += \
-	AppDirectedSmsService \
-	MotoImsServer \
-	MotoLocationProxy \
-	MotoLteTelephony \
-	MotoModemUtil \
-	MotoSimUiHelper \
+	appdirectedsmspermission \
+	com.motorola.android.server.ims \
 	ProgramMenu \
 	ProgramMenuSystem \
-	VZWAPNLib \
-	VZWAPNService
+	vzwapnpermission \

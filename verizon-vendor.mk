@@ -14,9 +14,11 @@
 
 # Proprietary VZW blobs for LTE
 
-PRODUCT_COPY_FILES += \
-    vendor/verizon/proprietary/VZWAPNLib.apk:system/app/VZWAPNLib.apk \
-    vendor/verizon/proprietary/VZWAPNService.apk:system/app/VZWAPNService.apk \
-    vendor/verizon/proprietary/IMSFramework.apk:system/app/IMSFramework.apk \
-    vendor/verizon/proprietary/libims.so:system/vendor/lib/libims.so \
-    vendor/verizon/proprietary/libims_jni.so:system/vendor/lib/libims_jni.so \
+include $(all-subdir-makefiles)
+
+PRODUCT_PACKAGES += \
+	appdirectedsmspermission \
+	com.motorola.android.server.ims \
+	ProgramMenu \
+	ProgramMenuSystem \
+	vzwapnpermission \
