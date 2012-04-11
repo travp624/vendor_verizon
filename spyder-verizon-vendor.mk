@@ -16,9 +16,14 @@
 
 include $(all-subdir-makefiles)
 
+PRODUCT_COPY_FILES += \
+    vendor/verizon/proprietary/com.motorola.android.telephony.jar:/system/framework/com.motorola.android.telephony.jar
+
 PRODUCT_PACKAGES += \
 	appdirectedsmspermission \
 	com.motorola.android.server.ims \
+	DataRoaming \
+	ModemStatsService \
 	ProgramMenu \
 	ProgramMenuSystem \
 	vzwapnpermission \
