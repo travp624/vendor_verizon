@@ -14,6 +14,11 @@
 
 LOCAL_PATH:=\$(call my-dir)
 
+include $(CLEAR_VARS)
+
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := com.motorola.android.telephony:com.motorola.android.telephony.jar
+include $(BUILD_MULTI_PREBUILT)
+
 include \$(CLEAR_VARS)
 
 LOCAL_MODULE := appdirectedsmspermission
@@ -66,6 +71,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 
+LOCAL_STATIC_JAVA_LIBRARIES := com.motorola.android.telephony
 LOCAL_MODULE := ProgramMenu
 LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
