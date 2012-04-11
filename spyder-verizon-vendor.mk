@@ -18,8 +18,10 @@ include $(all-subdir-makefiles)
 
 PRODUCT_PACKAGES += \
 	appdirectedsmspermission \
+	com.motorola.android.frameworks \
 	com.motorola.android.server.ims \
 	com.motorola.android.telephony \
+	framework-ext \
 	DataRoaming \
 	ModemStatsService \
 	ProgramMenu \
