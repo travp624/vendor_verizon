@@ -16,6 +16,9 @@
 
 include $(all-subdir-makefiles)
 
+PRODUCT_COPY_FILES += \
+    vendor/verizon/proprietary/libims_client_jni.so:system/lib/libims_client_jni.so
+
 PRODUCT_PACKAGES += \
 	appdirectedsmspermission \
 	com.motorola.android.server.ims \
