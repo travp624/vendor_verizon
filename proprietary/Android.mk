@@ -14,10 +14,20 @@
 
 LOCAL_PATH:=\$(call my-dir)
 
-include $(CLEAR_VARS)
+#include $(CLEAR_VARS)
 
-LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := com.motorola.android.telephony:com.motorola.android.telephony.jar
-include $(BUILD_MULTI_PREBUILT)
+#LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := com.motorola.android.telephony:com.motorola.android.telephony.jar
+#include $(BUILD_MULTI_PREBUILT)
+
+include \$(CLEAR_VARS)
+
+LOCAL_MODULE := com.motorola.android.telephony
+LOCAL_SRC_FILES := \$(LOCAL_MODULE).jar
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
+include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 
@@ -89,14 +99,4 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
-include \$(BUILD_PREBUILT)
-
-include \$(CLEAR_VARS)
-
-LOCAL_MODULE := com.motorola.android.telephony
-LOCAL_SRC_FILES := \$(LOCAL_MODULE).jar
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_SUFFIX := \$(COMMON_JAVA_PACKAGE_SUFFIX)
 include \$(BUILD_PREBUILT)
