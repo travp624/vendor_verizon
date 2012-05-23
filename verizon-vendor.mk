@@ -15,8 +15,11 @@
 # Proprietary VZW blobs for LTE
 
 PRODUCT_COPY_FILES += \
-	vendor/verizon/proprietary/VZWAPNLib.apk:system/app/VZWAPNLib.apk \
-	vendor/verizon/proprietary/VZWAPNService.apk:system/app/VZWAPNService.apk \
-	vendor/verizon/proprietary/IMSFramework.apk:system/app/IMSFramework.apk \
 	vendor/verizon/proprietary/libims.so:system/vendor/lib/libims.so \
 	vendor/verizon/proprietary/libims_jni.so:system/vendor/lib/libims_jni.so
+
+# All the apks necessary for toro
+PRODUCT_PACKAGES += \
+    IMSFramework \
+    VZWAPNLib \
+    VZWAPNService
